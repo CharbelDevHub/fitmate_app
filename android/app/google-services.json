@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "224537613180",
+    "project_id": "fitmateauth-510f2",
+    "storage_bucket": "fitmateauth-510f2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224537613180:android:a4ca3bb53339141aff4af9",
+        "android_client_info": {
+          "package_name": "com.example.fitmate_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmYHqwOwhTFMr7Kt3Tm2c5utDNvJkspfU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
