@@ -10,4 +10,14 @@ class ExerciseCategory {
     this.description,
     this.image_url,
   });
+
+   // Factory constructor to parse JSON
+  factory ExerciseCategory.fromJson(Map<String, dynamic> json) {
+    return ExerciseCategory(
+      exercise_category_id: json['exercise_category_id'],
+      name: json['name'],
+      description: json['description'],
+      image_url: json['image_url'],
+    );
+  }
 }
