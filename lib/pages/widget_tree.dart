@@ -1,25 +1,21 @@
-import 'package:fitmate_app/auth.dart';
-import 'package:fitmate_app/pages/home_page.dart';
+import 'package:fitmate_app/data/providers/auth_provider.dart';
 import 'package:fitmate_app/pages/login_register_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:fitmate_app/pages/home_page.dart';
 
-class WidgetTree extends StatefulWidget{
-  const WidgetTree({Key? key}): super(key: key);
+class WidgetTree extends StatelessWidget {
+  const WidgetTree({super.key});
 
   @override
-  State<WidgetTree> createState() => _WidgetTreeState();
-}
+  Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProviders>(context);
 
-class _WidgetTreeState extends State<WidgetTree>{
-  @override
-  Widget build(BuildContext context){
-    return StreamBuilder(stream: Auth().authStateChanges,
-     builder: (context, snapshot) {
-      if(snapshot.hasData){
-        return HomePage();
-      }else{
-        return const LoginPage();
-      }
-     });
+    // Check if the user is logged in
+    if (authProvider.currentUser != null) {
+      return HomePage();
+    } else {
+      return const LoginPage();
+    }
   }
 }

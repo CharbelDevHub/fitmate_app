@@ -6,6 +6,7 @@ class Exercise {
   final String? description;
   final String? image_url;
   final String? video_url;
+  final String? difficulty;
   final int exercise_category_id;
   final bool is_deleted;
 
@@ -19,6 +20,7 @@ class Exercise {
     this.video_url,
     required this.exercise_category_id,
     this.is_deleted = false,
+    this.difficulty
   });
 
   // Factory constructor to parse JSON
@@ -31,6 +33,7 @@ class Exercise {
       description: json['description'],
       image_url: json['image_url'],
       video_url: json['video_url'],
+      difficulty: json['difficulty'],
       exercise_category_id: json['exercise_category_id'],
       is_deleted: json['is_deleted'] ?? false, // Default to false if not provided
     );

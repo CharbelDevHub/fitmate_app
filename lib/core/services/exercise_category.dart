@@ -10,6 +10,7 @@ class ExerciseService {
   /// Fetch all categories
 Future<List<ExerciseCategory>> fetchCategories() async {
   try {
+    print('$baseUrl/GetAllCategories');
     final response = await http.get(Uri.parse('$baseUrl/GetAllCategories'));
 
     if (response.statusCode == 200) {
